@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Frontend Mentor | Fylo data storage component</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <section class="container">
+    <!-- Seccion de logo e iconos-->
+    <article class="section-icons">
+        <img class="section-icons__logo" src="./images/logo.svg" alt="logo">
+        <div class="section-icons__icono">
+          <div class="iconos">
+            <img src="./images/icon-document.svg" alt="icon-document">
+          </div>
+          <div class="iconos">
+            <img class="icono-small" src="./images/icon-folder.svg" alt="icon-folder">
+          </div>
+          <div class="iconos">
+            <img class="icono-small" src="./images/icon-upload.svg" alt="icon-upload">
+          </div>
+        </div>
+    </article>
+    
+    <!--Seccion de información-->
+    <article class="section-info">
+      <p class="section-info__title">You’ve used<strong> 815 GB</strong> of your storage</p>
+    <div class="progress-container">
+      <progress class="styled-progress" value="80" max="100"></progress>
+    </div>
+      <div class="section-info__card tooltip">
+        <p class="tooltip-text"><strong>185</strong> GB Left</p>
+      </div>
+      
+      <div class="section-info__gb">
+        <p>0 GB</p>
+        <p>1000 GB</p>
+      </div>
+    </article>
+  </section>
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Omar García</a>.
+  </div>
+</body>
+</html>

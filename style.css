@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+:root{
+    --Gradient: hsl(6, 100%, 80%) to hsl(335, 100%, 65%);
+    --Pale-Blue: hsl(243, 100%, 93%);
+    --Grayish-Blue: hsl(229, 7%, 55%);
+    --Dark-Blue: hsl(228, 56%, 26%);
+    --Very-Dark-Blue: hsl(229, 57%, 11%);
+
+    --fsize-default: 14px;
+
+    --ffamily-dafult:"Raleway", sans-serif;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: var(--ffamily-dafult);
+    font-size: var(--fsize-default);
+}
+.container{
+    width: 375px;
+    height: 600px;
+    margin: 40px auto;
+    background-image: url(./images/bg-mobile.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 65px 30px 52px;
+}
+.section-icons{
+    background-color: var(--Dark-Blue);
+    padding: 39px 139px 39px 0px;
+    width: 325px;
+    height: 196px;
+    border-top-right-radius: 50%;
+    text-align: center;
+}
+.section-icons__logo{
+    display: inline-block;
+    margin: 0 auto;
+    width: 120px;
+    position: relative;
+    left: 15px;
+}
+.section-icons__icono{
+    display: grid;
+    grid-template-columns: repeat(3, 2fr);
+    gap: 30px;
+    margin-top: 30px;
+    margin-left: 50px;
+    width: 205px;
+}
+.iconos{
+    background-color: var(--Very-Dark-Blue);
+    width: 50px;
+    height: 50px;
+    border-radius: 12px;
+    display: inline-block;
+}
+.iconos img{
+    margin: 10px auto;
+    width: 20px;
+}
+.icono-small{
+    height: 20px;
+}
+.section-info {
+    margin-top: 30px;
+    width: 330px;
+    height: 160px;
+    background-color: var(--Dark-Blue);
+    padding: 20px 25px;
+    border-radius: 12px;
+    position: relative;
+}
+.section-info__title{
+    color: var(--Grayish-Blue);
+    text-align: center;
+    margin-top: 35px;
+    margin-bottom: 20px;
+}
+.section-info__title strong {
+    color: #fff;
+}
+.section-info__gb{
+    display: flex;
+    justify-content: space-between;
+    color: #fff;
+    margin-top: -75px;
+}
+.section-info__card {
+    background-color: #fff;
+    width: 180px;
+    height: 77px;
+    position: relative;
+    left: 55px;
+    top: 20px;
+    border-radius: 12px;
+    text-align: center;
+}
+.section-info__card p{
+    position: relative;
+    top: 20px;
+    font-size: 18px;
+    color: var(--Grayish-Blue);
+}
+.section-info__card strong {
+    font-size: 35px;
+    color: #000;
+}
+.progress-container {
+    position: relative;
+    width: 100%;
+}
+.styled-progress {
+    width: 100%;
+    height: 20px;
+    -webkit-appearance: none;
+    appearance: none;
+    position: relative;
+}
+.styled-progress::-webkit-progress-bar {
+    background-color: #ddd;
+    border-radius: 10px;
+}
+.styled-progress::-webkit-progress-value {
+    background: linear-gradient(90deg, hsl(6, 100%, 80%), hsl(335, 100%, 65%));
+    border-radius: 10px;
+}
+.styled-progress::-moz-progress-bar {
+    background: linear-gradient(90deg, hsl(6, 100%, 80%), hsl(335, 100%, 65%));
+    border-radius: 10px;
+}
+.progress-container::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 77%;
+    transform: translate(-50%, -50%);
+    width: 15px;
+    height: 15px;
+    background-color: white;
+    border-radius: 50%;
+    z-index: 2;
+}
+@media (min-width: 1420px){
+    .container{
+        border: 1px solid red;
+        width: 1420px;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--Very-Dark-Blue);
+        background-image: url(./images/bg-desktop.png);
+        background-position: bottom;
+        background-size: auto;
+    }
+    .section-icons{
+        margin-right: 30px;
+        width: 360px;
+        height: 200px;
+    }
+    .section-info{
+        width: 500px;
+        height: 180px;
+    }
+    .section-info__title{
+        text-align: left;
+    }
+    .section-info__card{
+        top: -160px;
+        left: 272px;
+        display: inline-block;
+        border-bottom-right-radius: 0px;
+    }
+    .section-info__card:hover{
+        opacity: 1;
+    }
+    .section-info__card::after{
+        content: "";
+        position: absolute;
+        top: 91%; 
+        left: 91%;
+        transform: translateX(-50%);
+        border-width: 35px 0px 30px 32px;
+        border-style: solid;
+        border-color: #fff transparent transparent;
+    }
+}
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
